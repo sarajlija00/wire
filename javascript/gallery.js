@@ -11,6 +11,6 @@ function gallery () {
         
     }
     xhttp.open ("GET",'https://3d1pftib26.execute-api.eu-west-1.amazonaws.com/dev/images/list', true);
-    xhttp.setRequestHeader ('Authorization', token);
+    xhttp.setRequestHeader ('Authorization', token.token);
     xhttp.send();
 }
