@@ -23,7 +23,7 @@ const loginRequest = (email, password) => new Promise ((resolve, reject) => {
     }
     xhttp.open ('POST', url, true);
     xhttp.setRequestHeader ("Content-Type", "application/json;charset=UTF-8");
-    xhttp.open(request);
+    xhttp.send(request);
 })
 
 const isLoggedIn = () => {
