@@ -26,7 +26,7 @@ const loginRequest = (email, password) => new Promise ((resolve, reject) => {
     xhttp.open(request);
 })
 
-const isloggedIn = () => {
+const isLoggedIn = () => {
     const token = localStorage.getItem ('token');
     return token;
 }
