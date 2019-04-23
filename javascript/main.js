@@ -1,21 +1,18 @@
-import laLigaTable from './football.mjs';
-import { isLoggedIn, loginRequest } from './login.mjs';
+import { isLoggedIn, login, logout } from './login.mjs';
+import { showResult, showLogin, showMenu, hideMenu } from './helper.mjs'
+
 
 if(isLoggedIn()) {
-  alert('prijavljen si mozes ici na home');
+  showResult();
+  showMenu();
 } else {
-  alert('prikazacu login screen jer nisi prijavljen');
+  console.log('not logged in')
+  showLogin();
+  hideMenu();
 }
 
-  // loginRequest('almir@bind.ba', 'coolpass')
-  //   .then(tokenObject => {
-  //     localStorage.setItem('token', tokenObject.token);
-  //     console.log('prvo token ', tokenObject.token);
-  //     return laLigaTable();
-  //   })
-  //   .then(table => console.log('onda tabela ', table))
-  //   .catch(err => console.log(err));
 
-
+window.login = login;
+window.logout = logout;
 
 

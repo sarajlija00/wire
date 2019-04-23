@@ -27,3 +27,7 @@ input {
     font-family: 'Courier New', Courier, monospace;
     
 }
+
+.pointer-cursor {
+    cursor: pointer;
+}

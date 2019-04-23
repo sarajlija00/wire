@@ -10,29 +10,31 @@
     </head>
 
     <body class="body">
-        <nav class="font">
-            <a>Home</a> |
-            <a>Gallery</a> |
-            <a>Weather</a> |
+        <nav class="font" id="menu">
+            <a  class="pointer-cursor">Home</a> |
+            <a href="./pages/gallery.html" class="pointer-cursor">Gallery</a> |
+            <a href="./pages/weather.html" class="pointer-cursor">Weather</a> |
+            <a onclick="logout()" class="pointer-cursor">Logout</a> |
+
         </nav>
         <br>
         <br>
         <img src="./images/user.png" alt="user pictures" class="img">
         <div class="input center">
-            <form id="log"> 
+            <form  id="login-form"> 
                 <input id="email" type="email" placeholder="Email">
                 <br>
                 <br>
                 <input id="password" type="password" placeholder="Password">
                 <br>
                 <br>
-                <input type="button" value="Login" class="login" onclick="loginRequest()"> 
+                <input type="button" value="Login" class="login" onclick="login()"> 
                 <br>
                 <br>
                 <a class="font">forgot your password</a>
             </form>
             <div id="error"></div>
-            <div id="result" style="display:none" class="font"></div>
+            <div id="result" style="display:none" class="font">Result </div>
         </div>
     </body>
 </html>
