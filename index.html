@@ -6,27 +6,28 @@
         <meta name="description" content="Wireframe">
         <meta name="author" content="Elvir Uzunovic">
         <link rel="stylesheet" href="./css/style.css">
-        <script type="module" src="./javascript/main.mjs"></script>
+        <script type="module" src="./js/main.mjs"></script>
     </head>
 
     <body class="body">
-        <nav class="font">
-            <a>Home</a> |
-            <a href="./pages/gallery.html">Gallery</a> |
-            <a>Weather</a> |
+        <nav id="menu" class="font pointer-cursor">
+            <a class="pointer-cursor">Home</a> |
+            <a href="./pages/gallery.html" class="pointer-cursor">Gallery</a> |
+            <a class="pointer-cursor">Weather</a> |
+            <a class="pointer-cursor" onclick="logOut()">Logout</a>
         </nav>
         <br>
         <br>
         <img src="./images/user.png" alt="user pictures" class="img">
         <div class="input center">
-            <form id="log"> 
+            <form  id="login-form"> 
                 <input id="email" type="email" placeholder="Email">
                 <br>
                 <br>
                 <input id="password" type="password" placeholder="Password">
                 <br>
                 <br>
-                <input type="button" value="Login" class="login" onclick="loginRequest()"> 
+                <input type="button" value="Login" class="login" onclick="login()"> 
                 <br>
                 <br>
                 <a class="font">forgot your password</a>
