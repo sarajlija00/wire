@@ -32,8 +32,8 @@ const isLoggedIn = () => {
 }
 
 const login = () => {
-    const email = document.getElementById ('email');
-    const password = document.getElementById ('password');
+    const email = document.getElementById ('email').value;
+    const password = document.getElementById ('password').value;
     loginRequest(email, password)
         .then(handleLogin)
         .catch(handleError)
