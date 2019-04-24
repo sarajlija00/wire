@@ -1,4 +1,4 @@
-import { showMenu, showResult } from "./helper.mjs";
+import { showMenu, showResult, showLogin } from "./helper.mjs";
 
 
 const loginDiv = document.getElementById ('login-form');
@@ -14,12 +14,14 @@ const loginRequest = (email, password) => new Promise ((resolve, reject) => {
         password
     }
     let request = JSON.stringify(object);
+    xhttp.onreadystatechange = function (){
     if (xhttp.readyState == 4 && xhttp.status == 200){
         const response = JSON.parse(xhttp.responseText);
         resolve(response);
     }
     if (xhttp.readyState == 4 && xhttp.status !== 200) {
         reject('Incorrect email or password');
+        } 
     }
     xhttp.open ('POST', url, true);
     xhttp.setRequestHeader ("Content-Type", "application/json;charset=UTF-8");
@@ -50,7 +52,7 @@ const handleLogin = response => {
     showMenu()
 }
 
-const handleError = error => errorDiv.innerHTML = error;
+const handleError = err => errorDiv.innerHTML = err;
 
 const logout = () => {
     clearToken();
